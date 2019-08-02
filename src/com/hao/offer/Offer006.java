@@ -1,6 +1,7 @@
 package com.hao.offer;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 import com.hao.common.ListNode;
 
@@ -18,7 +19,7 @@ public class Offer006 {
         ListNode ListNode2 = new ListNode(2);
         ListNode ListNode3 = new ListNode(9);
         ListNode ListNode4 = new ListNode(6);
-        ListNode ListNode5 = new ListNode(5);
+        ListNode ListNode5 = new ListNode(99);
         ListNode1.next=ListNode2;
         ListNode2.next=ListNode3;
         ListNode3.next=ListNode4;
@@ -31,7 +32,7 @@ public class Offer006 {
 	}
 	
 	public static  ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-		return Solution1(listNode);
+		return Solution3(listNode);
 	}	
 	
 	//=================******** 题 解 **************======================
@@ -57,7 +58,34 @@ public class Offer006 {
 	 * @return
 	 */
 	private static ArrayList<Integer> Solution2(ListNode listNode){
-		return null;
+		Stack<ListNode> stack = new Stack<ListNode>();
+		while(listNode!=null) {
+			stack.push(listNode);
+			listNode = listNode.next;
+		}
+		
+		while(!stack.isEmpty()) {
+			list.add(stack.pop().val);
+		}
+		return list;
+	}
+	
+	/**
+	 * 利用栈 栈中存放值
+	 * @param listNode
+	 * @return
+	 */
+	private static ArrayList<Integer> Solution3(ListNode listNode){
+		Stack<Integer> stack = new Stack<Integer>();
+		while(listNode!=null) {
+			stack.push(listNode.val);
+			listNode = listNode.next;
+		}
+		
+		while(!stack.isEmpty()) {
+			list.add(stack.pop());
+		}
+		return list;
 	}
 	
 }
