@@ -9,7 +9,7 @@ package com.hao.offer;
  * @author hao
  *
  */
-public class Offer010 {
+public class Offer010_1 {
 	public static void main(String[] args) {
 		
 	}
