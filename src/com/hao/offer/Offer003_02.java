@@ -13,7 +13,7 @@ package com.hao.offer;
  */
 public class Offer003_02 {
 	public static void main(String[] args) {
-		int[] arr = {1,9,5,4,3,2,6,7,7};
+		int[] arr = {1,9,4,4,3,2,6,7,7};
 		int dupNum = Offer003_02.getDuplication(arr);
 		System.out.println(dupNum);
 	}
@@ -24,9 +24,9 @@ public class Offer003_02 {
 	
 	/**
 	 * 由于题目中说明 数组长度为n+1,而数组中数字的范围为1~n, 这就说明数组中一定存在重复的数字
-	 * 将数字1 ~ n 切成两半：1 ~ m  、  m ~n 
+	 * 将数字1 ~ n 切成两半：1 ~ m  、  m+1 ~n 
 	 * 可以判断 数组中数字在两个 范围中出现的次数，
-	 * 如果出现的次数大于 m ， 则说明 重复的数字在1 ~ m 之间，否则，m ~ n之间
+	 * 如果出现的次数大于 m ， 则说明 重复的数字在1 ~ m 之间，否则，m+1 ~ n之间
 	 * 
 	 * 类似于二分查找的方法
 	 * 
@@ -40,7 +40,8 @@ public class Offer003_02 {
 		int start = 1;
 		int end = arr.length-1;
 		while(end>=start) {
-			int middle = ((end-start)>>1) + start;
+//			int middle = ((end-start)>>1) + start;
+			int middle = (end+start)>>1;
 			int count = getCount(arr,start,middle);
 			if(end==start) {
 				if(count > 1) {

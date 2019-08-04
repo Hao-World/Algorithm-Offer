@@ -7,7 +7,7 @@ import com.hao.common.TreeNode;
 
 /**
  * 
- * 【面试题7】 【创建二叉树】
+ * 【面试题7】 【重建二叉树】
  * 
  * 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。
  * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -98,7 +98,10 @@ public class Offer007 {
 		preOrder(tree.left);
 		preOrder(tree.right);
 	}
-	
+	/**
+	 * 前序遍历非递归
+	 * @param tree
+	 */
 	private static void preOrderNonReCurSive(TreeNode tree) {
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode p = tree;
@@ -126,7 +129,10 @@ public class Offer007 {
 		System.out.print(tree.val);
 		inOrder(tree.right);
 	}
-	
+	/**
+	 * 中序遍历非递归
+	 * @param tree
+	 */
 	private static void inOrderNonRecursive(TreeNode tree) {
 		Stack<TreeNode> stack = new Stack<TreeNode>(); 
 		TreeNode p = tree;
@@ -155,7 +161,10 @@ public class Offer007 {
 		postOrder(tree.right);
 		System.out.print(tree.val);
 	}
-	
+	/**
+	 * 后序遍历非递归
+	 * @param tree
+	 */
 	private static void postOrderNonReCurSive(TreeNode tree) {
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode p = tree,r =null;
@@ -177,9 +186,5 @@ public class Offer007 {
 				}
 			}
 		}
-		
-		
 	}
-
-
 }
