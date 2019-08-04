@@ -11,11 +11,16 @@ package com.hao.offer;
  */
 public class Offer010_1 {
 	public static void main(String[] args) {
-		
+		System.out.println(Fibonacci(8));
 	}
     public static int Fibonacci(int n) {
-    	return Solution1(n);
+    	return Solution2(n);
     }
+    /**
+     * 递归的思路
+     * @param n
+     * @return
+     */
 	private static int Solution1(int n) {
 		if(n<=0) {
 			return 0;
@@ -27,6 +32,11 @@ public class Offer010_1 {
 		return Solution1(n-1)+Solution1(n-2);
 	}
 	
+	/**
+	 * 把计算过的只保存起来，保存前面的两项，计算的过程中给前面两项重新赋值
+	 * @param n
+	 * @return
+	 */
 	private static int Solution2(int n) {
 		int[] arr = {0,1};
 		if(n<2) {
@@ -42,5 +52,4 @@ public class Offer010_1 {
 		}
 		return fN;
 	}
- 
 }
