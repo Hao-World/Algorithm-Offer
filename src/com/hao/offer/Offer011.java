@@ -15,12 +15,22 @@ package com.hao.offer;
  */
 public class Offer011 {
 	public static void main(String[] args) {
+//		int [] arr = {3,4,5,1,2};
+		int [] arr = {1,0,1,1,1};
+		int minNumberInRotateArray = minNumberInRotateArray(arr);
+		System.out.println(minNumberInRotateArray);
 		
 	}
 	
 	public  static int minNumberInRotateArray(int [] array) {
 		return Solution1(array);
 	}
+	
+	/**
+	 * 利用二分查找的思路，注意：要考虑特殊情况
+	 * @param array
+	 * @return
+	 */
 	public static  int Solution1(int [] array) {
 		
 		int index1 = 0;
@@ -33,6 +43,7 @@ public class Offer011 {
 			}
 			indexMid = (index1+index2) >>1;
 			if(array[index1] == array[index2] && array[indexMid] == array[index1]) {
+				//特殊情况：要用顺序查找
 				return MinInOrder(array, index1, index2);
 			}
 			
@@ -46,7 +57,13 @@ public class Offer011 {
 		
 		return array[indexMid];
 	}
-	
+	/**
+	 * 在index1和index2之间顺序查找最小值
+	 * @param array 在此数组中进行查找
+	 * @param index1  开始索引位置
+	 * @param index2  结束索引位置
+	 * @return
+	 */
 	private static int MinInOrder(int[] array,int index1,int index2) {
 		int min = array[index1];
 		for(int i=index1+1;i<=index2;i++) {
