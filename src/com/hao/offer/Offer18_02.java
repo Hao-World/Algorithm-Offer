@@ -79,10 +79,10 @@ public class Offer18_02 {
 		ListNode node1 = new ListNode(1, node2);
 		ListNode pHead = new ListNode(0, node1);
 		System.out.println("删除之前");
-		printListNode(pHead);
+		ListNode.printListNode(pHead);
 		System.out.println("删除之后--->");
 		deleteDuplication(pHead);
-		printListNode(pHead);
+		ListNode.printListNode(pHead);
 	}
 
 	/**
@@ -98,33 +98,20 @@ public class Offer18_02 {
 		ListNode node1 = new ListNode(1, node2);
 		ListNode pHead = new ListNode(1, node1);
 		System.out.println("删除之前");
-		printListNode(pHead);
+		ListNode.printListNode(pHead);
 		System.out.println("删除之后--->");
 		deleteDuplication(pHead);
-		printListNode(pHead);
+		ListNode.printListNode(pHead);
 	}
 
 	private static void test3() {
 		System.out.println("只有一个节点");
 		ListNode pHead = new ListNode(1, null);
 		System.out.println("删除之前");
-		printListNode(pHead);
+		ListNode.printListNode(pHead);
 		System.out.println("删除之后--->");
 		deleteDuplication(pHead);
-		printListNode(pHead);
+		ListNode.printListNode(pHead);
 	}
 
-	/**
-	 * 打印链表 此题目没有头结点
-	 * 
-	 * @param pHead
-	 */
-	private static void printListNode(ListNode pHead) {
-		ListNode p = pHead;
-		while (p != null) {
-			System.out.print(p.val + " ");
-			p = p.next;
-		}
-		System.out.println();
-	}
 }

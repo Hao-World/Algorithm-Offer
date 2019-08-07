@@ -63,10 +63,10 @@ public class Offer18_01 {
 		ListNode node1 = new ListNode(4, node2);
 		ListNode pHead = new ListNode(-1, node1);// 头结点
 		System.out.println("删除之前");
-		printListNode(pHead);
+		ListNode.printListNodeWithHead(pHead);
 		System.out.println("删除之后--->");
 		deleteNodeInList(pHead, node2);
-		printListNode(pHead);
+		ListNode.printListNodeWithHead(pHead);
 	}
 
 	private static void test2() {//
@@ -74,10 +74,10 @@ public class Offer18_01 {
 		ListNode node1 = new ListNode(4, null);
 		ListNode pHead = new ListNode(-1, node1);// 头结点
 		System.out.println("删除之前");
-		printListNode(pHead);
+		ListNode.printListNodeWithHead(pHead);
 		System.out.println("删除之后-->");
 		deleteNodeInList(pHead, node1);
-		printListNode(pHead);
+		ListNode.printListNodeWithHead(pHead);
 	}
 
 	/**
@@ -90,24 +90,12 @@ public class Offer18_01 {
 		ListNode node1 = new ListNode(4, node2);
 		ListNode pHead = new ListNode(-1, node1);// 头结点
 		System.out.println("删除之前");
-		printListNode(pHead);
+		ListNode.printListNodeWithHead(pHead);
 		System.out.println("删除之后(传入参数为null，null)--->");
 		deleteNodeInList(null, null);
-		printListNode(pHead);
+		ListNode.printListNodeWithHead(pHead);
 	}
 
-	/**
-	 * 打印链表
-	 * 
-	 * @param pHead
-	 */
-	private static void printListNode(ListNode pHead) {
-		ListNode p = pHead.next;
-		while (p != null) {
-			System.out.print(p.val + " ");
-			p = p.next;
-		}
-		System.out.println();
-	}
+	
 
 }
