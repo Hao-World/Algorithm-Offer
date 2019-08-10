@@ -4,22 +4,30 @@ import java.util.Stack;
 
 /**
  * 待完善
- * 二叉树结构
  * @author hao
  *
  */
-public class TreeNode {
-	public int val;
-	public TreeNode left;
-	public TreeNode right;
-	public TreeNode(int val) {
-		this.val = val;
+public class BinaryTree {
+
+	public TreeNode root;
+	
+	
+	public BinaryTree(int[] array) {
+		root = createBinaryTreeByArray(array, 0);
 	}
-	
-	
-	
-	
-	
+
+	private TreeNode createBinaryTreeByArray(int []array,int index)
+	{
+	    TreeNode tn = null;
+		if (index<array.length) {
+			    int value = array[index];
+				tn = new TreeNode(value);
+				tn.left = createBinaryTreeByArray(array, 2*index+1);
+				tn.right = createBinaryTreeByArray(array, 2*index+2);
+				return tn;
+			}		
+		return tn;
+	}
 	
 	/**
 	 * 前序遍历 递归
@@ -122,6 +130,5 @@ public class TreeNode {
 			}
 		}
 	}
-	
 	
 }
