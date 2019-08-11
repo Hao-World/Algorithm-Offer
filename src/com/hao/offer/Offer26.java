@@ -50,7 +50,7 @@ public class Offer26 {
 	 * @return
 	 */
 	private static boolean DoesTreeHaveTree2(TreeNode root1, TreeNode root2) {
-		if (root2 == null) {
+		if (root2 == null) {//这里要先判断root2是否为空
 			return true;
 		}
 		if (root1 == null) {
