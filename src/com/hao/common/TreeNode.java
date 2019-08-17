@@ -10,8 +10,8 @@ import java.util.Stack;
  */
 public class TreeNode {
 	public int val;
-	public TreeNode left;
-	public TreeNode right;
+	public TreeNode left=null;
+	public TreeNode right=null;
 	public TreeNode(int val) {
 		this.val = val;
 	}
@@ -29,7 +29,7 @@ public class TreeNode {
 		if(tree == null) {
 			return ;
 		}
-		System.out.print(tree.val);
+		System.out.print(tree.val+" ");
 		preOrder(tree.left);
 		preOrder(tree.right);
 	}
