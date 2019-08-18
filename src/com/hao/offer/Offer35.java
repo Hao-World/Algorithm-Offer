@@ -26,11 +26,54 @@ public class Offer35 {
     }
 
 	private static  RandomListNode Solution1(RandomListNode pHead) {
-//		TODO
-		
-		return null;
+		cloneNodes(pHead);
+		connectSlibNodes(pHead);
+		return reconnectNodes(pHead);
 	}
 
+	
+	 private static void cloneNodes(RandomListNode pHead){
+	        RandomListNode pNode = pHead;
+	        while(pNode!=null){
+	            RandomListNode pClonedNode = new RandomListNode(pNode.label);
+	            pClonedNode.next = pNode.next;
+	            pClonedNode.random = null;
+	            pNode.next = pClonedNode;
+	            pNode = pClonedNode.next;
+	        }
+	        
+	    }
+	    private static void connectSlibNodes(RandomListNode pHead){
+	        RandomListNode pNode = pHead;
+	        while(pNode!=null){
+	            RandomListNode pClonedNode = pNode.next;
+	            if(pNode.random!=null){
+	                 pClonedNode.random = pNode.random.next;
+	            }
+	            pNode = pClonedNode.next;
+	        }
+	    }
+	    private  static RandomListNode reconnectNodes(RandomListNode pHead){
+	        RandomListNode pNode = pHead;
+	        RandomListNode pClonedHead = null;
+	        RandomListNode pClonedNode = null;
+	        if(pNode!=null){
+	            pClonedHead = pClonedNode = pNode.next;
+	            pNode.next = pClonedNode.next;
+	            pNode = pClonedNode.next;
+	        }
+	        while(pNode!=null){
+	            pClonedNode.next = pNode.next;
+	            pClonedNode = pClonedNode.next;
+	            pNode.next = pClonedNode.next;
+	            pNode = pNode.next;
+	        }
+	        return pClonedHead;
+	    }
+
+	
+
+	
 	private static void test1() {
 
 	}
