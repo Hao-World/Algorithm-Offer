@@ -5,9 +5,9 @@ public class QuickSort {
 		
 		int pivot = arr[low];
 		if(low<high) {
-			while(low<high && arr[high]>pivot) high--;
+			while(low<high && arr[high]>=pivot) high--;
 			arr[low] = arr[high];
-			while(low<high && arr[low]<pivot) low++;
+			while(low<high && arr[low]<=pivot) low++;
 			arr[high] = arr[low];
 			
 		}
