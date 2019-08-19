@@ -14,7 +14,7 @@ import java.util.Stack;
  * @author hao
  *
  */
-public class Offer31 {
+public class Offer031 {
 	public static void main(String[] args) {
 		test1();
 		test2();

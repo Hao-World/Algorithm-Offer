@@ -11,7 +11,7 @@ import com.hao.common.RandomListNode;
  * @author hao
  *
  */
-public class Offer35 {
+public class Offer035 {
 	public static void main(String[] args) {
 		test1();
 		test2();

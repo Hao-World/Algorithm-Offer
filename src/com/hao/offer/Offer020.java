@@ -10,7 +10,7 @@ package com.hao.offer;
  * @author hao
  *
  */
-public class Offer20 {
+public class Offer020 {
 	public static void main(String[] args) {
 		System.out.println("****功能测试****");
 		test1();

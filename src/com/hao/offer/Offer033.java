@@ -8,7 +8,7 @@ package com.hao.offer;
  * @author hao
  *
  */
-public class Offer33 {
+public class Offer033 {
 	public static void main(String[] args) {
 		test1();
 		test2();

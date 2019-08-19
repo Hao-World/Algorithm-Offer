@@ -9,7 +9,7 @@ import com.hao.common.TreeNode;
  * @author hao
  *
  */
-public class Offer28 {
+public class Offer028 {
 	public static void main(String[] args) {
 		test1();
 		test2();

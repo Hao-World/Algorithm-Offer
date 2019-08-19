@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author hao
  *
  */
-public class Offer29 {
+public class Offer029 {
 	public static void main(String[] args) {
 		test1();
 		test2();

@@ -11,7 +11,7 @@ import java.util.Collections;
  * @author hao
  *
  */
-public class Offer38 {
+public class Offer038 {
 	public static void main(String[] args) {
 		test1();
 		test2();

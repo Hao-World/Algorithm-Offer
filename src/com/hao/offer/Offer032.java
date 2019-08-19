@@ -15,7 +15,7 @@ import com.hao.common.TreeNode;
  * @author hao
  *
  */
-public class Offer32 {
+public class Offer032 {
 	public static void main(String[] args) {
 		test1();
 		test2();

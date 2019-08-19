@@ -8,7 +8,7 @@ import java.util.Stack;
  * @author hao
  *
  */
-public class Offer30 {
+public class Offer030 {
 
 	Stack<Integer> stack_min = new Stack<Integer>();// 存储最小值的辅助栈
 	Stack<Integer> stack_data = new Stack<Integer>();// 存储栈中数据

@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author hao
  *
  */
-public class Offer21 {
+public class Offer021 {
 	public static void main(String[] args) {
 		test1();
 		test2();

@@ -6,7 +6,7 @@ package com.hao.offer;
  * @author hao
  *
  */
-public class Offer15 {
+public class Offer015 {
 	public static void main(String[] args) {
 		System.out.println("测试正数-->");
 		test1();

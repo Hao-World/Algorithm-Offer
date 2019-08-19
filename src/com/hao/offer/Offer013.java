@@ -11,7 +11,7 @@ package com.hao.offer;
  * @author hao
  *
  */
-public class Offer13 {
+public class Offer013 {
 
 	public static void main(String[] args) {
 		System.out.println(movingCount(18, 3, 4));

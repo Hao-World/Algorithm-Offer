@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author hao
  *
  */
-public class Offer17 {
+public class Offer017 {
 
 	public static void main(String[] args) {
 		System.out.println("功能测试--->");

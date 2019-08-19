@@ -10,7 +10,7 @@ import com.hao.common.TreeNode;
  * @author hao
  *
  */
-public class Offer27 {
+public class Offer027 {
 	public static void main(String[] args) {
 		System.out.println("测试太麻烦了以后再弄吧");
 		System.out.println("效率太低，还是通过牛客网测试吧");

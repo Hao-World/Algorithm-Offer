@@ -8,7 +8,7 @@ import com.hao.common.ListNode;
  * @author hao
  *
  */
-public class Offer24 {
+public class Offer024 {
 	public static void main(String[] args) {	
 		test1();
 		test2();
