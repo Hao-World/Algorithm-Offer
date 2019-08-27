@@ -15,13 +15,10 @@ public class Offer {
 		
 	}
 
-	public static Object Fun() {
-		return Solution1();
+	public static void Fun() {
+//		return Solution1();
 	}
 
-	private static Object Solution1() {
-		return null;
-	}
 
 	private static void test1() {
 

@@ -29,7 +29,7 @@ public class Offer053_02 {
 		int start = 0;
 		int end = array.length-1;
 		
-		while(start< end) {
+		while(start <= end) {
 			int mid = (start+end)>>1;
 			if(array[mid]!=mid) {
 				
