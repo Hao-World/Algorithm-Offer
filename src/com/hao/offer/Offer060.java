@@ -65,6 +65,10 @@ public class Offer060 {
 			calP(probabilities, number, curNumber - 1, sum + i); // 相当于剩余的骰子少一个，总点数增加。
 	}
 
+	/**
+	 * 方法二
+	 * @param number
+	 */
 	private static void Solution2(int number) {
 		if (number <= 0)
 			return; // 错误
